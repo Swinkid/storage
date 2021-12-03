@@ -102,7 +102,7 @@ class Local extends Device
                 throw new Exception('Can\'t create directory: ' . \dirname($tmp));
             }
         }
-        if(!file_put_contents($tmp, "{$chunk}\n", FILE_APPEND)) {
+        if(!file_put_contents($tmp, "$chunk\n", FILE_APPEND)) {
             throw new Exception('Can\'t write chunk log ' . $tmp);
         }
 
